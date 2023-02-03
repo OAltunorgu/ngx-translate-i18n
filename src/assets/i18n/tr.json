@@ -1,0 +1,12 @@
+{
+  "tr": "Türkçe",
+  "en": "İngilizce",
+  "changeLanguage": "Dili değiştir",
+  "key": "Anahtar",
+  "value": "Değer",
+  "example1": "Örnek 1",
+  "example2": {
+    "title": "Örnek 2 başlık",
+    "subtitle": "Örnek 2 alt başlık"
+  }
+}

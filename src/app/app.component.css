@@ -1,0 +1,28 @@
+.divCenter{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+label {
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
