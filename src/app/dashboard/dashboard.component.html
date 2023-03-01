@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <h1>{{ title }}</h1>
+</div>
+<div class="input-group mb-3 d-flex justify-content-center">
+  <div class="input-group-prepend">
+    <label class="input-group-text" translate>changeLanguage</label>
+  </div>
+  <select class="custom-select" #language (change)="onChange(language.value)">
+    <option *ngFor="let lang of translateService.getLangs()" [value]="lang">
+      {{ lang | translate }}
+    </option>
+  </select>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th translate>key</th>
+      <th translate>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>example1</td>
+      <td translate>example1</td>
+    </tr>
+    <tr>
+      <td>example2.title</td>
+      <td translate>example2.title</td>
+    </tr>
+    <tr>
+      <td>example2.subtitle</td>
+      <td translate>example2.subtitle</td>
+    </tr>
+  </tbody>
+</table>

@@ -5,17 +5,25 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {
+  NgbDropdownModule
+} from '@ng-bootstrap/ng-bootstrap';
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
     FormsModule,
+    NgbPaginationModule,
+    NgbAlertModule,
     HttpClientModule,
+    NgbDropdownModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -24,6 +32,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       },
       defaultLanguage: 'tr',
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
